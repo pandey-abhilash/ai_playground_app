@@ -3,17 +3,21 @@
   "module": "index.ts",
   "type": "module",
   "private": true,
+    "workspaces": [
+    "apps/*"
+  ],
   "devDependencies": {
     "@types/bun": "latest",
     "@types/express": "^5.0.6"
   },
-  "workspaces": [
-    "apps/*"
-  ],
   "peerDependencies": {
     "typescript": "^5"
   },
+  "scripts": {
+    "dev": "bun run index.ts"
+  },
   "dependencies": {
+    "concurrently": "^10.0.3",
     "dotenv": "^17.4.2",
     "express": "^5.2.1"
   }
