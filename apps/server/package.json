@@ -8,6 +8,7 @@
     "dev": "bun --watch run index.ts"
   },
   "dependencies": {
+    "@google/genai": "^2.8.0",
     "cors": "",
     "dotenv": "^17.4.2",
     "express": "^5.2.1"
