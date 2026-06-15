@@ -1,11 +1,11 @@
 
-const conversationHistory= new Array<{role:"user"|"assistant",content:string}>
+const conversationHistory: Array<{ role: "user" | "model"; parts: string[] }> = [];
 
-export const chatRepository={
-    setConversation(role:"user"|"assistant",content:string){
-        conversationHistory.push({role,content});
+export const chatRepository = {
+    setConversation(role: "user" | "model", text: string) {
+        conversationHistory.push({ role, parts: [text] });
     },
-    getConversation(){
+    getConversation() {
         return conversationHistory;
     }
 }

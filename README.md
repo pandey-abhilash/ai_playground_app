@@ -1,15 +1,30 @@
 # ai_playground_app
 
-To install dependencies:
+Bun workspace monorepo with a React client and Express server.
+
+## Install
 
 ```bash
 bun install
 ```
 
-To run:
+## Development
+
+Run both apps:
 
 ```bash
-bun run index.ts
+bun run dev
 ```
 
-This project was created using `bun init` in bun v1.3.14. [Bun](https://bun.com) is a fast all-in-one JavaScript runtime.
+Run individually:
+
+```bash
+bun run dev:server
+bun run dev:client
+```
+
+## Build
+
+```bash
+bun run build
+```

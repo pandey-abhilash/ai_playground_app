@@ -1,24 +1,20 @@
 {
   "name": "ai_playground_app",
-  "module": "index.ts",
-  "type": "module",
   "private": true,
-    "workspaces": [
+  "type": "module",
+  "workspaces": [
     "apps/*"
   ],
+  "scripts": {
+    "dev": "concurrently -n server,client -c blue,green \"bun run --filter server dev\" \"bun run --filter client dev\"",
+    "dev:server": "bun run --filter server dev",
+    "dev:client": "bun run --filter client dev",
+    "build": "bun run --filter client build",
+    "build:client": "bun run --filter client build"
+  },
   "devDependencies": {
     "@types/bun": "latest",
-    "@types/express": "^5.0.6"
-  },
-  "peerDependencies": {
-    "typescript": "^5"
-  },
-  "scripts": {
-    "dev": "bun run index.ts"
-  },
-  "dependencies": {
     "concurrently": "^10.0.3",
-    "dotenv": "^17.4.2",
-    "express": "^5.2.1"
+    "typescript": "~6.0.2"
   }
 }

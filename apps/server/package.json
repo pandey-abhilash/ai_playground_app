@@ -1,6 +1,7 @@
 {
   "name": "server",
   "version": "0.0.0",
+  "private": true,
   "type": "module",
   "main": "index.ts",
   "scripts": {
@@ -9,8 +10,12 @@
   },
   "dependencies": {
     "@google/genai": "^2.8.0",
-    "cors": "",
+    "cors": "^2.8.6",
     "dotenv": "^17.4.2",
     "express": "^5.2.1"
+  },
+  "devDependencies": {
+    "@types/cors": "^2.8.19",
+    "@types/express": "^5.0.6"
   }
 }
